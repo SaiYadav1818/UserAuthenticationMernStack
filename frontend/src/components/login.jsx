@@ -23,7 +23,7 @@ const api=await fetch('http://localhost:5005/api/auth/login',{
 const data=await api.json()
 if(data.ok){
    toast.success("Login successful ✅");
-    //navigate("/home/sucess")
+    
 }
 else{
     alert("invalid username or password")
@@ -42,7 +42,8 @@ else{
     
 return(
     <>
-    <div className="align-items-center justify-content-center d-flex vh-100 bg-secondary">
+
+    <div className="align-items-center justify-content-center d-flex vh-100 ">
         <div className="bg-dark p-5 rounded shadow">
  <form onSubmit={handle}>
     <div className="mb-4 ">
@@ -63,7 +64,8 @@ return(
     </form>
     </div>
     </div>
-   
+    
+ 
    {
     error && <p style={{color:"red",fontSize:"20px",paddingLeft:"10px"}}>{error}</p>
    }
